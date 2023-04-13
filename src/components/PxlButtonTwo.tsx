@@ -11,25 +11,28 @@ const height = {
   large: "48px",
 };
 
-interface Props extends ButtonProps {
+interface Props {
   text: string;
   disableElevation: boolean; // Define the disableElevation prop with type boolean
-  size: keyof typeof height; // Reference the keys of the height constant
+  size: keyof typeof height;
 }
 
-function PxlButton(props: Props) {
-  const { text, size, disableElevation, ...rest } = props;
-  const heightValue = height[size];
-
+const PxlButton: React.FC<Props> = ({
+  text,
+  disableElevation,
+  size,
+  ...rest
+}) => {
   return (
     <Button
-      style={{ height: heightValue }}
+      size={size}
       {...rest}
+      variant="contained"
       disableElevation={disableElevation}
     >
       {text}
     </Button>
   );
-}
+};
 
 export default PxlButton;
