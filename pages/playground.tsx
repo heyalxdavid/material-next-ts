@@ -6,6 +6,7 @@ import Typography from "@mui/material/Typography";
 import Link from "../src/components/Link";
 import ProTip from "../src/components/ProTip";
 import Copyright from "../src/components/Copyright";
+import RecipeReviewCard from "../src/components/ExpandCard";
 
 import {
   Container,
@@ -38,10 +39,13 @@ export default function Playground() {
   return (
     <Container sx={{ padding: "20px" }}>
       <Box>
+        <RecipeReviewCard />
+      </Box>
+      <Box>
         <PxlButton
           size="large"
           text="Sample text"
-          disableElevation={false}
+          disableElevation={true}
           variant="contained"
           color="primary"
           onClick={handleButtonClick}

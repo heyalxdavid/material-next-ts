@@ -10,7 +10,7 @@ const PxlTextField = () => {
 
   return (
     <TextField
-      sx={{ height: "400px" }}
+      sx={{ width: "100%" }}
       id="outlined-basic"
       label="Custom"
       variant="outlined"
